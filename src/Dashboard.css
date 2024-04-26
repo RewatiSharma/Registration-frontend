@@ -1,0 +1,61 @@
+/* Dashboard.css */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  border: 2px solid #ccc;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.center h2 {
+  color: #0056b3;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+ padding-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  width: 90%; 
+}
+
+.card {
+  flex: 1;
+  margin: 0 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 5px 5px 0 0;
+}
+
+button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #68e7f5;
+  border: none;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
