@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Table from 'react-bootstrap/Table';
 import { useNavigate } from 'react-router-dom';
 import { getbatchesService, deletebatchService } from '../services/user';
+import './Batchmanager.css';
 
 function Batchmanager() {
   const [batches, setBatches] = useState([]);
@@ -26,7 +26,6 @@ function Batchmanager() {
     navigate("/batchmaster", { state: { editBatch: batch } });
   };
 
-  
   const handleDelete = async (index) => {
     try {
       const batchId = batches[index]._id;
@@ -40,9 +39,9 @@ function Batchmanager() {
   };
 
   return (
-    <div>
-      <h1>Batch Manager</h1>
-      <Table responsive>
+    <div className="batchmanager-container">
+      <h1 className="batchmanager-title">Batch Manager</h1>
+      <table className="batchmanager-table">
         <thead>
           <tr>
             <th>#</th>
@@ -64,13 +63,13 @@ function Batchmanager() {
               <td>{batch.advancefee}</td>
               <td>{batch.totalfee}</td>
               <td>
-                <button onClick={() => handleDelete(index)}>Delete</button>
-                <button onClick={() => doEdit(batch)}>Edit</button>
+                <button className="batchmanager-button" onClick={() => handleDelete(index)}>Delete</button>
+                <button className="batchmanager-button" onClick={() => doEdit(batch)}>Edit</button>
               </td>
             </tr>
           ))}
         </tbody>
-      </Table>
+      </table>
     </div>
   );
 }

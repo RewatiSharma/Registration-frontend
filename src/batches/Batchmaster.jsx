@@ -3,6 +3,7 @@ import { Form, Row, Col, Button, Alert, Container } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { batchmasterService, editbatchesService } from '../services/user';
 import 'react-datepicker/dist/react-datepicker.css';
+import './Batchmaster.css';
 
 
 function formatDate(dateString) {
